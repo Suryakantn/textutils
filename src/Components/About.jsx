@@ -3,7 +3,7 @@ import React from 'react'
 const features = [
     ['✦', 'Useful tools, instantly', 'Change case, clean up whitespace, find and replace, or export your finished text.'],
     ['◉', 'Live writing insights', 'Keep an eye on words, characters, sentences, and estimated reading time as you write.'],
-    ['⌑', 'Private by design', 'Your text is processed locally in this browser and is never uploaded to a server.'],
+    ['⌑', 'Privacy in your hands', 'Workspace and diff tools run in your browser. Grammar checks send text to LanguageTool only when you choose to check it.'],
 ]
 
 export default function About() {

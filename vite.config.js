@@ -1,7 +1,8 @@
 import { defineConfig } from 'vitest/config';
 import react from '@vitejs/plugin-react';
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
+  base: mode === 'production' ? '/textutils/' : '/',
   plugins: [react()],
   build: {
     outDir: 'build',
@@ -11,4 +12,4 @@ export default defineConfig({
     globals: true,
     setupFiles: './src/setupTests.js',
   },
-});
+}));

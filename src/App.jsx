@@ -4,6 +4,8 @@ import About from './Components/About';
 import Navbar from './Components/Navbar';
 import TextForm from './Components/TextForm';
 import Alert from './Components/Alert';
+import DiffChecker from './Components/DiffChecker';
+import GrammarChecker from './Components/GrammarChecker';
 import {
   BrowserRouter as Router,
   Routes,
@@ -35,18 +37,20 @@ function App() {
 
   return (
     <div className={`app-shell theme-${mode}`}>
-      <Router>
+      <Router basename={import.meta.env.BASE_URL}>
         <Navbar title="TextUtil" mode={mode} toggleMode={toggleMode} />
         <Alert alert={alert} />
         <main className="page-container">
           <Routes>
             <Route path="/about" element={<About mode={mode} />} />
+            <Route path="/diff" element={<DiffChecker />} />
+            <Route path="/grammar" element={<GrammarChecker />} />
             <Route path="/" element={<TextForm mode={mode} showAlert={showAlert} />} />
           </Routes>
         </main>
         <footer className="site-footer">
           <span>Made for words that matter.</span>
-          <span>Your text stays in your browser.</span>
+          <span>Writing tools for your browser.</span>
         </footer>
       </Router>
     </div>

@@ -103,7 +103,6 @@ export default function TextForm({ mode, showAlert }) {
                         <h2>Text editor</h2>
                         <p>Start typing or paste your text below</p>
                     </div>
-                    <span className="privacy-badge"><span aria-hidden="true">●</span> Private by design</span>
                 </div>
 
                 <label className="visually-hidden" htmlFor="text-editor">Text to edit</label>

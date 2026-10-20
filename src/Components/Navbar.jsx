@@ -28,6 +28,8 @@ function Navbar({ title, mode, toggleMode }) {
                 <div className={`nav-content${menuOpen ? ' is-open' : ''}`} id="primary-navigation">
                     <div className="nav-links">
                         <NavLink to="/" end onClick={closeMenu}>Workspace</NavLink>
+                        <NavLink to="/diff" onClick={closeMenu}>Diff</NavLink>
+                        <NavLink to="/grammar" onClick={closeMenu}>Grammar</NavLink>
                         <NavLink to="/about" onClick={closeMenu}>About</NavLink>
                     </div>
                     <button
